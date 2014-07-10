@@ -2,7 +2,7 @@ define(function(require) {
 
   var Backbone = require('backbone');
 
-  var StockModel = Backbone.Model.extend({
+  var ListItem = Backbone.Model.extend({
     defaults: {
       ticker: '',
       name: '',
@@ -10,6 +10,11 @@ define(function(require) {
     }
   });
 
+  var List = Backbone.Collection.extend({
 
-  return StockModel;
+    model: ListItem,
+    url: '/stocks'
+  });
+
+  return new List();
 });

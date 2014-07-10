@@ -1,0 +1,10 @@
+paths:
+  text: "require-text"
+
+shim:
+  jquery_ujs:
+    deps: ["jquery"]
+    exports: "$"
+
+modules:
+  - name: "stock_tracker/main"

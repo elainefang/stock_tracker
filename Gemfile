@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'requirejs-rails'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-stack_explorer'

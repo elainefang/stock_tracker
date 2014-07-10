@@ -14,3 +14,12 @@
     <button>Submit</button>
   </fieldset>
 </form>
+
+<div id="container"></div>
+
+
+<%= requirejs_include_tag %>
+<script>
+  require.config({urlArgs: 'bust='+ Date.now()});
+  require(['stock_tracker/main']);
+</script>
