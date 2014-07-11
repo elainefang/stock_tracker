@@ -5,20 +5,22 @@ define(function(require) {
   var list = require('../models/list');
 
   var ListView = Backbone.View.extend({
-    el: '#container',
+    el: '#stock-list',
 
     initialize: function() {
       this.listenTo(this.collection, 'add remove change sort', this.render);
     },
 
     render: function() {
-      this.$el.empty();
-      var $e = this.$el;
+      var html = '';
 
-      this.collection.each(function(one) {
-        var view = new StockView({model: one});
-        $e.append(view.el);
+      this.collection.each(function(model) {
+        html += '<li><a href="#stocks/' + model.get('ticker') + '">' + model.get('ticker') + '</a></li>';
       });
+
+      this.$el.html(html);
     }
   });
+
+  return new ListView({collection: list});
 });
