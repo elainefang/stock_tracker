@@ -7,4 +7,4 @@ shim:
     exports: "$"
 
 modules:
-  - name: "stock_tracker/main"
+  - name: "main"

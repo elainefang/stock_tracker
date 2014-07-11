@@ -1,18 +1,32 @@
-define(function(require) {});
-  var FormView = Backbone.View.extend({
-    el: 'form',
+define(function(require) {
 
-    events: {
-      'submit' : 'createStock'
+  var Backbone = require('backbone');
+  var searchResult = require('../models/search');
+
+  var SearchView = Backbone.View.extend({
+    el: '#search',
+
+    initialize: function() {
+      this.listenTo(this.model, 'sync', this.render);
+      this.render();
     },
 
-    createStock: function(evt) {
-      evt.preventDefault();
+    render: function() {
 
-      var ticker = this.$('[name="ticker').val();
-      this.el.reset();
-      this.collection.create({
-        ticker: ticker
-      });
+    },
+
+    events: {
+      'submit': 'onSubmit',
+    },
+
+    onSubmit: function(evt) {
+      evt.preventDefault();
+      var searchTerm = this.$('[name="ticker"]').val();
+      this.model.search(searchTerm);
+      this.$('input').val('');
     }
+
   });
+
+  return new SearchView({model: searchResult});
+});
