@@ -23,6 +23,7 @@ define(function(require) {
       this.searchTerm = keyword;
       this.set({ticker: this.searchTerm});
       this.fetch({dataType: 'jsonp'});
+      console.log('fetched data');
     },
 
     parse: function(data) {

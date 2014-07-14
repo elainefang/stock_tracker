@@ -9,10 +9,27 @@ define(function(require) {
 
     initialize: function() {
       this.listenTo(this.model, 'sync', this.render);
-      this.render();
+      this.model.search('GOOG');
+      // this.render();
     },
 
     render: function() {
+      console.log('rendered');
+      var margin = {top: 20, right: 20, bottom: 30, left: 50},
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+      var svg = d3.select("body").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      var prices = this.model.get('prices');
+      console.log( prices );
+
+      d3.select('svg')
+        .data(this.model.get('prices'));
 
     },
 

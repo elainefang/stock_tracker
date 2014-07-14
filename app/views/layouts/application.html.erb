@@ -10,7 +10,7 @@
 <%= yield %>
 
 
-<%= requirejs_include_tag %>
+<%= requirejs_include_tag "application" %>
 <script>
   require.config({urlArgs: 'bust='+ Date.now()});
   require(['main']);
