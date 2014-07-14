@@ -1,23 +1,25 @@
-define(function(require) {
+// define(function(require) {
 
-  var _ = require('underscore');
-  var Backbone = require('backbone');
-  var searchResult = require('../models/search');
+//   var _ = require('underscore');
+//   var Backbone = require('backbone');
+//   var searchResult = require('../models/search');
 
-  var GraphView = Backbone.View.extend({
-    tagName: 'div',
+//   var GraphView = Backbone.View.extend({
+//     tagName: 'div',
 
-    initialize: function() {
-      this.listenTo(this.model, 'sync', this.render);
-      this.render();
-    },
+//     initialize: function() {
+//       this.listenTo(this.model, 'sync', this.render);
+//       this.render();
+//     },
 
-    render: function() {
-      var rendered = '<h3>' + this.model.get('ticker') + '</h3>';
-      return this.$el.html(rendered);
-    }
+//     render: function() {
 
-  });
+//       var rendered = '<h3>' + this.model.get('ticker') + '</h3>';
+//       debugger
+//       return this.$el.html(rendered);
+//     }
 
-  return new GraphView({model: searchResult});
-});
+//   });
+
+//   return new GraphView({model: searchResult});
+// });

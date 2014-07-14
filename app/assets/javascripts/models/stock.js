@@ -1,15 +1,15 @@
-define(function(require) {
+// define(function(require) {
 
-  var Backbone = require('backbone');
+//   var Backbone = require('backbone');
 
-  var StockModel = Backbone.Model.extend({
-    defaults: {
-      ticker: '',
-      name: '',
-      quantity: 0
-    }
-  });
+//   var StockModel = Backbone.Model.extend({
+//     defaults: {
+//       ticker: '',
+//       name: '',
+//       quantity: 0
+//     }
+//   });
 
 
-  return StockModel;
-});
+//   return StockModel;
+// });

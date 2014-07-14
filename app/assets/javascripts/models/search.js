@@ -6,23 +6,39 @@ define(function(require) {
     defaults: {
       ticker: '',
       name: '',
-      quantity: 0
+      quantity: 0,
+      positions: [],
+      dates: [],
+      prices: []
+
     },
 
     searchTerm: '',
 
     url: function() {
-      // return 'http://dev.markitondemand.com/Api/v2/InteractiveChart/json?parameters=%7B"Normalized"%3Afalse%2C"NumberOfDays"%3A365%2C"DataPeriod"%3A"Day"%2C"Elements"%3A%5B%7B"Symbol"%3A"' + this.searchTerm +  '"%2C"Type"%3A"price"%2C"Params"%3A%5B"c"%5D%7D%5D%7D';
-      return 'http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=' + this.searchTerm;
+      return 'http://dev.markitondemand.com/Api/v2/InteractiveChart/jsonp?parameters=%7B"Normalized"%3Afalse%2C"NumberOfDays"%3A365%2C"DataPeriod"%3A"Day"%2C"Elements"%3A%5B%7B"Symbol"%3A"'+ this.searchTerm +'"%2C"Type"%3A"price"%2C"Params"%3A%5B"c"%5D%7D%5D%7D';
     },
 
     search: function(keyword) {
       this.searchTerm = keyword;
-      this.fetch();
+      this.set({ticker: this.searchTerm});
+      this.fetch({dataType: 'jsonp'});
     },
 
     parse: function(data) {
-      console.log(data);
+
+      var setHash = {};
+
+      setHash.positions = data.Positions;
+      setHash.dates = data.Dates;
+      setHash.prices = data.Elements[0].DataSeries.close.values;
+
+      // this.set({ticker: this.searchTerm});
+      // this.set({positions: data.Positions});
+      // this.set({dates: data.Dates});
+      // this.set({prices: data.Elements[0].DataSeries.close.values});
+
+      return setHash;
     }
   });
 

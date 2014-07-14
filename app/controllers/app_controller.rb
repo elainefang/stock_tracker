@@ -3,7 +3,7 @@ class AppController < ApplicationController
   def index
   end
 
-  def stocks
+  def search
   end
 
 end
