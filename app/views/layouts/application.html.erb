@@ -7,8 +7,10 @@
 </head>
 <body>
 <%= render "common/header" %>
-<%= yield %>
 
+  <div class="main">
+    <%= yield %>
+  </div>
 
 <%= requirejs_include_tag "application" %>
 <script>
