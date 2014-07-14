@@ -34,11 +34,6 @@ define(function(require) {
       setHash.dates = data.Dates;
       setHash.prices = data.Elements[0].DataSeries.close.values;
 
-      // this.set({ticker: this.searchTerm});
-      // this.set({positions: data.Positions});
-      // this.set({dates: data.Dates});
-      // this.set({prices: data.Elements[0].DataSeries.close.values});
-
       return setHash;
     }
   });

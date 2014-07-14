@@ -15,9 +15,9 @@ define(function(require) {
     render: function() {
       var rendered = this.template(this.model.toJSON());
 
-      var dates = this.model.get('dates');
-      var positions = this.model.get('positions');
-      var prices = this.model.get('prices');
+      // var dates = this.model.get('dates');
+      // var positions = this.model.get('positions');
+      // var prices = this.model.get('prices');
 
       return this.$el.html(rendered);
 
