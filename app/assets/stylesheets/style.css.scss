@@ -1,6 +1,6 @@
 path {
     stroke: steelblue;
-    stroke-width: 2;
+    stroke-width: 3;
     fill: none;
 }
 
@@ -14,7 +14,8 @@ path {
 
 
 body {
-  background-image: image-url('target.png');
+  background-attachment: fixed;
+  background-image: image-url('buildings.png');
   background-position: left top;
   background-repeat: no-repeat;
 }
@@ -33,12 +34,13 @@ h1#main-title {
 }
 
 #my-list {
-
 }
 
 fieldset {
+  border-radius: 5px;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 24px;
+  margin: 0 10%;
   text-align: center;
 }
   fieldset input {
@@ -53,10 +55,11 @@ fieldset {
 
 li {
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
 }
 
 a {
+  color: #FFFFCC;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -64,6 +67,7 @@ a {
 }
 
 a:hover {
+  color: #CCFFCC;
   text-decoration: underline;
 }
 
@@ -83,4 +87,32 @@ button {
 
 img {
   height: 150px;
+}
+
+.home-page {
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: center;
+}
+
+  .home-page img {
+    margin: 25px;
+  }
+
+.home-view {
+  text-align: center;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.header {
+  background-color: #000;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px;
+}
+
+.pull-right {
+  margin: 0;
 }

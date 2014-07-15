@@ -15,7 +15,7 @@ define(function(require) {
     render: function() {
       $("svg").remove();
       var prices = this.model.get('prices');
-      var dates = this.model.get('dates');
+      // var dates = this.model.get('dates');
       var positions = this.model.get('positions');
 
       var stockArray = [];
@@ -29,8 +29,8 @@ define(function(require) {
       }
 
       var margin = {top: 20, right: 20, bottom: 30, left: 50},
-        width = 800 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
 
       // var parseDate = d3.time.format("%Y-%m-%dT%H:%M:%SZ").parse;
 

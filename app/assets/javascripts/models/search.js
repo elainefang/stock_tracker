@@ -4,9 +4,6 @@ define(function(require) {
 
   var SearchResult = Backbone.Model.extend({
     defaults: {
-      ticker: '',
-      name: '',
-      quantity: 0,
       positions: [],
       dates: [],
       prices: []
