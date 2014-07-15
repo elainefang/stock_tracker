@@ -29,7 +29,7 @@ define(function(require) {
 
     stock: function(id) {
       console.log("Stock view");
-      searchResult.set({ticker: id});
+
       var view = new StockView({model: searchResult});
       this.setView(view);
     }
