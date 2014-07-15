@@ -3,6 +3,7 @@ define(function(require) {
   var Backbone = require('backbone');
   var _ = require('underscore');
   var stockHTML = require('text!../templates/stock.html');
+  var list = require('../models/list');
 
   var StockView = Backbone.View.extend({
     tagName: 'div',
@@ -94,7 +95,44 @@ define(function(require) {
       var rendered = this.template(this.model.toJSON());
 
       return this.$el.html(rendered);
+    },
+
+    events: {
+      'click #add': 'onAdd',
+      'click #remove': 'onRemove'
+    },
+
+    onAdd: function(evt) {
+      evt.preventDefault();
+      console.log("Add button clicked");
+
+      var saved = this.getSavedStock();
+
+      if (saved) {
+        list.create({
+          ticker: this.model.get('ticker'),
+          user_id: $('#user-id').val()
+        });
+      }
+    },
+
+    getSavedStock: function() {
+      var stockTicker = this.model.get('ticker');
+      return list.findWhere({ticker: stockTicker});
+    },
+
+    onRemove: function(evt) {
+      evt.preventDefault();
+
+      console.log("Add button clicked");
+      var saved = this.getSavedStock();
+
+      if (!saved) {
+        saved.destroy();
+      }
+
     }
+
   });
 
   return StockView;

@@ -36,6 +36,7 @@ h1#main-title {
 }
 
 #my-list {
+
 }
 
 fieldset {
@@ -122,4 +123,22 @@ img {
 
 .login-link {
   color: navy;
+}
+
+
+#add {
+  display: inline;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#delete {
+  display: inline;
+  font-size: 16px;
+}
+
+#ticker-name {
+  color: maroon;
+  display: inline-block;
+  margin-right: 10px;
 }

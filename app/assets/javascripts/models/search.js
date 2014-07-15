@@ -14,12 +14,12 @@ define(function(require) {
     searchTerm: '',
 
     url: function() {
-      return 'http://dev.markitondemand.com/Api/v2/InteractiveChart/jsonp?parameters=%7B"Normalized"%3Afalse%2C"NumberOfDays"%3A365%2C"DataPeriod"%3A"Day"%2C"Elements"%3A%5B%7B"Symbol"%3A"'+ this.searchTerm +'"%2C"Type"%3A"price"%2C"Params"%3A%5B"c"%5D%7D%5D%7D';
+      return 'http://dev.markitondemand.com/Api/v2/InteractiveChart/jsonp?parameters=%7B"Normalized"%3Afalse%2C"NumberOfDays"%3A365%2C"DataPeriod"%3A"Day"%2C"Elements"%3A%5B%7B"Symbol"%3A"'+ escape(this.searchTerm) +'"%2C"Type"%3A"price"%2C"Params"%3A%5B"c"%5D%7D%5D%7D';
     },
 
     search: function(keyword) {
       this.searchTerm = keyword;
-      this.set({ticker: this.searchTerm});
+      this.set({ ticker: this.searchTerm.toUpperCase() });
       this.fetch({dataType: 'jsonp'});
       console.log('fetched data');
     },
