@@ -58,7 +58,7 @@ li {
   padding: 10px;
 }
 
-a {
+.header a {
   color: #FFFFCC;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 22px;
@@ -66,7 +66,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.header a:hover {
   color: #FFCC66;
   text-decoration: underline;
 }
@@ -117,6 +117,6 @@ img {
   margin: 0;
 }
 
-a.login-link {
+.login-link {
   color: navy;
 }
