@@ -1,0 +1,69 @@
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+
+body {
+  background: url(image-path('target.png')) no-repeat left top;
+}
+
+h1#main-title {
+  font-family: 'Lobster Two', cursive;
+  font-size: 100px;
+  margin: 10px 0;
+  background: -webkit-linear-gradient(black, navy);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  padding: 0 10%;
+}
+
+#my-list {
+
+}
+
+fieldset {
+  font-size: 26px;
+  text-align: center;
+}
+  fieldset input {
+    font-size: 24px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
+
+  button {
+
+  }
+
+li {
+  display: inline-block;
+  padding: 5px;
+}
+
+a {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  margin-bottom: 100px;
+}

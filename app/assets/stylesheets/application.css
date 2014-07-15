@@ -14,29 +14,3 @@
  *= require_self
  */
 
-path {
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-
-body {
-  padding: 0 50px;
-}
-
-.main {
-  padding: 0 10%;
-}
-
-#my-list {
-
-}

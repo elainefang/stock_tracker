@@ -10,13 +10,6 @@ define(function(require) {
 
   console.log("Main file ready.");
 
-  // searchResult.fetch();
   Backbone.history.start();
 
-  // var list = require('./models/list');
-
-  // searchResult.fetch().then(function() {
-  //   var router = new Router();
-  //   Backbone.history.start();
-  // });
 });
