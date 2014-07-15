@@ -14,7 +14,7 @@ path {
 
 
 body {
-  background: url('/assets/target.png') no-repeat left top;
+  background: url(image_path('/assets/target.png')) no-repeat left top;
 }
 
 h1#main-title {
