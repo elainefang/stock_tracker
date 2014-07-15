@@ -1,7 +1,7 @@
 define(function(require) {
 
   var Backbone = require('backbone');
-  var searchResult = require('../models/search');
+  var SearchResult = require('../models/search');
   var router = require('../routers/router');
 
   var SearchView = Backbone.View.extend({
@@ -24,12 +24,12 @@ define(function(require) {
     onSubmit: function(evt) {
       evt.preventDefault();
       var searchTerm = this.$('[name="ticker"]').val();
-      this.model.search(searchTerm);
       this.$('input').val('');
-      router.navigate('#stocks/' + this.model.searchTerm, true);
+      router.navigate('#stocks/' + searchTerm, true);
     }
 
   });
 
-  return new SearchView({model: searchResult});
+  var model = new SearchResult();
+  return new SearchView({model: model});
 });

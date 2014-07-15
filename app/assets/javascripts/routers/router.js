@@ -1,7 +1,7 @@
 define(function(require) {
 
   var Backbone = require('backbone');
-  var searchResult = require('../models/search');
+  var SearchResult = require('../models/search');
   var HomeView = require('../views/home');
   var StockView = require('../views/stock');
 
@@ -29,8 +29,9 @@ define(function(require) {
 
     stock: function(id) {
       console.log("Stock view");
-
-      var view = new StockView({model: searchResult});
+      var model = new SearchResult({ticker: id});
+      model.search(id);
+      var view = new StockView({model: model});
       this.setView(view);
     }
   });

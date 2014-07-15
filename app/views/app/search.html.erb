@@ -19,7 +19,10 @@
 <div id="container"></div>
 
 <div id="my-list">
-  <h2>My Stocks</h2>
+  <% if current_user %>
+    <h2><%= current_user.email %></h2>
+  <% end %>
+  <h3>My Stocks</h3>
   <ul class="stock-list" id="stock-list"></ul>
 </div>
 

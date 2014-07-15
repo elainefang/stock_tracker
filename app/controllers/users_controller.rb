@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
 
-  def index
-    binding.pry
-  end
+  # def index
+  # end
 
-  def show
-  end
+  # def show
+  # end
 
 end

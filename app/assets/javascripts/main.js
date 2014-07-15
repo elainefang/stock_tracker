@@ -4,8 +4,8 @@ define(function(require) {
   var Backbone = require('backbone');
 
   var router = require('./routers/router');
-  var searchView = require('./views/search');
-  var searchResult = require('./models/search');
+  var SearchView = require('./views/search');
+  var SearchResult = require('./models/search');
   var stockView = require('./views/stock');
 
   console.log("Main file ready.");
