@@ -42,6 +42,11 @@ group :development, :test do
   gem 'simplecov', '~> 0.7.1'
 end
 
+group :production, :staging do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
