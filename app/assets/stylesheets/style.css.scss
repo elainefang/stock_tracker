@@ -36,7 +36,12 @@ h1#main-title {
 }
 
 #my-list {
+  float: right;
+  margin: 0;
+  position: relative;
+  top: -50px;
 
+  z-index: 100;
 }
 
 fieldset {
@@ -141,4 +146,9 @@ img {
   color: maroon;
   display: inline-block;
   margin-right: 10px;
+}
+
+#stock-list-heading {
+  font-weight: bold;
+  text-align: center;
 }

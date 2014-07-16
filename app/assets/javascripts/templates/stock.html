@@ -1,9 +1,11 @@
 <div class="ticker-info">
   <h1 id="ticker-name"><%= ticker %></h1>
 </div>
-<div class="buttons"></div>
+<div class="buttons">
+  <% if ($('#user-id').val()) { %>
+    <button id="add">Add Stock</button><button id="delete">Remove Stock</button>
+  <% } %>
+</div>
 
-<% if ($('#user-id').val()) { %>
-  <% $('.buttons').html('<button id="add">Add Stock</button><button id="delete">Remove Stock</button>'); %>
-<% } %>
+
 <h2>Stock performance over the past year</h2>

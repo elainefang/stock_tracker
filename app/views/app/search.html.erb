@@ -20,7 +20,7 @@
 
 <div id="my-list">
   <% if current_user %>
-    <p><%= current_user.email %></p>
+    <p id="stock-list-heading">Stocks of <br><%= current_user.email %></b></p>
     <input type="hidden" id="user-id" value="<%= current_user.id %>"></input>
   <% end %>
   <ul class="stock-list" id="stock-list"></ul>

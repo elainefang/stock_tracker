@@ -12,7 +12,7 @@ define(function(require) {
 
   var List = Backbone.Collection.extend({
     model: ListItem,
-    url: '/users/'+ $('#user-id').val() + 'stocks'
+    url: '/users/'+ $('#user-id').val() + '/stocks'
   });
 
   return new List();

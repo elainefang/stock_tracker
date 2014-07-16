@@ -8,12 +8,15 @@ define(function(require) {
 
     initialize: function() {
       this.listenTo(this.collection, 'sync add remove', this.render);
+      this.render();
     },
 
     render: function() {
       var html = '';
 
-      this.collection.each(function(model) {
+      console.log('Collection in list view');
+      console.log(this.collection);
+      list.each(function(model) {
         html += '<li><a href="#stocks/' + model.get('ticker') + '">' + model.get('ticker') + '</a></li>';
       });
 

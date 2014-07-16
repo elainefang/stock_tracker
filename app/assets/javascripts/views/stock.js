@@ -14,6 +14,8 @@ define(function(require) {
     },
 
     render: function() {
+
+
       $("svg").remove();
       var prices = this.model.get('prices');
       // var dates = this.model.get('dates');
@@ -99,21 +101,22 @@ define(function(require) {
 
     events: {
       'click #add': 'onAdd',
-      'click #remove': 'onRemove'
+      'click #delete': 'onRemove'
     },
 
     onAdd: function(evt) {
       evt.preventDefault();
       console.log("Add button clicked");
+      // var saved = this.getSavedStock();
+      // if (saved) {
 
-      var saved = this.getSavedStock();
+      // create what you add as a model, and add it to the collection
+      list.create({
+        ticker: this.model.get('ticker'),
+        user_id: parseInt($('#user-id').val())
+      });
 
-      if (saved) {
-        list.create({
-          ticker: this.model.get('ticker'),
-          user_id: $('#user-id').val()
-        });
-      }
+      // }
     },
 
     getSavedStock: function() {
@@ -124,7 +127,7 @@ define(function(require) {
     onRemove: function(evt) {
       evt.preventDefault();
 
-      console.log("Add button clicked");
+      console.log("Remove button clicked");
       var saved = this.getSavedStock();
 
       if (!saved) {

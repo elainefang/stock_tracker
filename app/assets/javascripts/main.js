@@ -8,10 +8,16 @@ define(function(require) {
   var SearchView = require('./views/search');
   var SearchResult = require('./models/search');
   var StockView = require('./views/stock');
+  var listView = require('./views/list');
 
   console.log("Main file ready.");
 
-  list.fetch();
-  Backbone.history.start();
+  list.fetch().then(function() {
+    console.log(list);
+    list.each(function(model) {
+      console.log(model.get('ticker'));
+    });
+    Backbone.history.start();
+  });
 
 });
