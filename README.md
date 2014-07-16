@@ -1,4 +1,4 @@
-Artbook
+Stock Tracker
 =========
 
 **Stock Tracker** allows users to look up stock performance and follow their favorite tickers. The stock prices over the past year are displayed with a line graph.
@@ -30,9 +30,10 @@ Backlog
 ----
 A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1119694).
 
-The Entity Relationship Diagram can be seen at [this Gliffy diagram](http://www.gliffy.com/go/publish/5796496).
+The Entity Relationship Diagram:
+![alt tag](https://github.com/ef718/stock_tracker/blob/master/public/Wireframes.png)
 
-The wireframes are shown in [this Gliffy diagram](http://www.gliffy.com/go/publish/5797273).
-
+The wireframes are shown below:
+![alt tag](https://github.com/ef718/stock_tracker/blob/master/public/ERD.png)
 ---
 ###### Written by Elaine Fang
