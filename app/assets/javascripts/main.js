@@ -10,13 +10,11 @@ define(function(require) {
   var StockView = require('./views/stock');
   var listView = require('./views/list');
 
-  console.log("Main file ready.");
-
   list.fetch().then(function() {
     console.log(list);
-    list.each(function(model) {
-      console.log(model.get('ticker'));
-    });
+    // list.each(function(model) {
+    //   console.log(model.get('ticker'));
+    // });
     Backbone.history.start();
   });
 

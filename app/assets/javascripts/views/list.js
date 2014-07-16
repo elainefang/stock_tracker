@@ -14,14 +14,22 @@ define(function(require) {
     render: function() {
       var html = '';
 
-      console.log('Collection in list view');
-      console.log(this.collection);
       list.each(function(model) {
-        html += '<li><a href="#stocks/' + model.get('ticker') + '">' + model.get('ticker') + '</a></li>';
+        html += '<li><a href="#stocks/' + model.get('ticker') + '">' + model.get('ticker') + '</a><span id="delete-list"> &times; </span></li>';
       });
 
       this.$el.html(html);
+    },
+
+    events: {
+      'click span' : 'onDelete'
+    },
+
+    onDelete: function(evt) {
+      var deleteTicker = this.$(evt.target).parent().text().slice(0, -3);
+      list.findWhere({ticker: deleteTicker}).destroy();
     }
+
   });
 
   return new ListView({collection: list});

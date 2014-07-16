@@ -38,10 +38,16 @@ h1#main-title {
 #my-list {
   float: right;
   margin: 0;
-  position: relative;
-  top: -50px;
-
+  position: fixed;
+  right: 100px;
+  top: 200px;
   z-index: 100;
+
+  li {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
 }
 
 fieldset {
@@ -143,7 +149,7 @@ img {
 }
 
 #ticker-name {
-  color: maroon;
+  color: #6B0024;
   display: inline-block;
   margin-right: 10px;
 }
@@ -151,4 +157,8 @@ img {
 #stock-list-heading {
   font-weight: bold;
   text-align: center;
+}
+
+span#delete-list {
+  color: #B20000;
 }

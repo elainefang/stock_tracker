@@ -22,8 +22,8 @@
   <% if current_user %>
     <p id="stock-list-heading">Stocks of <br><%= current_user.email %></b></p>
     <input type="hidden" id="user-id" value="<%= current_user.id %>"></input>
+    <ul class="stock-list" id="stock-list"></ul>
   <% end %>
-  <ul class="stock-list" id="stock-list"></ul>
 </div>
 
 

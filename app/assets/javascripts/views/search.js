@@ -13,7 +13,6 @@ define(function(require) {
     },
 
     render: function() {
-      console.log('rendered');
 
     },
 
