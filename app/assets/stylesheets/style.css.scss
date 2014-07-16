@@ -18,6 +18,7 @@ body {
   background-image: image-url('buildings.png');
   background-position: left top;
   background-repeat: no-repeat;
+  margin: 0;
 }
 
 h1#main-title {
@@ -123,7 +124,6 @@ img {
 
 .header {
   background-color: #000;
-  border-radius: 5px;
   margin: 0;
   padding: 5px;
 }
