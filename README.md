@@ -1,7 +1,9 @@
 Stock Tracker
 =========
 
-**Stock Tracker** allows users to look up stock performance and follow their favorite tickers. The stock prices over the past year are displayed with a line graph.
+**Stock Tracker** allows users to look up stock performance and follow specific stocks. Once a ticker is entered, the price over the past year is displayed in a line graph.
+
+Users can persist the stocks they want to follow by signing in.
 
 Technologies Used
 ----
