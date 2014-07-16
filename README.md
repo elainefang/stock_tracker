@@ -31,9 +31,9 @@ Backlog
 A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1119694).
 
 The Entity Relationship Diagram:
-![alt tag](https://github.com/ef718/stock_tracker/blob/master/public/Wireframes.png)
+![alt tag](https://raw.github.com/ef718/stock_tracker/blob/master/public/Wireframes.png)
 
 The wireframes are shown below:
-![alt tag](https://github.com/ef718/stock_tracker/blob/master/public/ERD.png)
+![alt tag](https://raw.github.com/ef718/stock_tracker/blob/master/public/ERD.png)
 ---
 ###### Written by Elaine Fang
