@@ -14,8 +14,11 @@ define(function(require) {
     render: function() {
       var html = '';
 
+      // Only append the stocks where the user_id matches the current user
       list.each(function(model) {
-        html += '<li><a href="#stocks/' + model.get('ticker') + '">' + model.get('ticker') + '</a><span id="delete-list"> &times; </span></li>';
+        if ( model.get('user_id') === parseInt($('#user-id').val()) ) {
+          html += '<li><a href="#stocks/' + model.get('ticker') + '">' + model.get('ticker') + '</a><span id="delete-list"> &times; </span></li>';
+        }
       });
 
       this.$el.html(html);
