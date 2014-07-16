@@ -30,10 +30,13 @@ Backlog
 ----
 A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1119694).
 
-The Entity Relationship Diagram:
+ERD
+----
+The Entity Relationship Diagram is show below:
 ![alt tag](http://i.imgur.com/XprzaEY.png)
 
-The wireframes are shown below:
+Wireframes
+----
 ![alt tag](http://i.imgur.com/iBsS4fj.png)
 ---
 ###### Written by Elaine Fang
