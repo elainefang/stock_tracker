@@ -32,8 +32,8 @@ define(function(require) {
       }
 
       var margin = {top: 20, right: 20, bottom: 30, left: 50},
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+        width = 800 - margin.left - margin.right,
+        height = 425 - margin.top - margin.bottom;
 
       // var parseDate = d3.time.format("%Y-%m-%dT%H:%M:%SZ").parse;
 
